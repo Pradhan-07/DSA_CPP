@@ -1,23 +1,53 @@
+// #include<iostream>
+// using namespace std;
+
+// class Node{ // User Defined Data Type
+// public:
+//     int val;
+//     Node* next;
+//     Node(int val){
+//         this->val = val;
+//     }
+// };
+
+// int main(){
+//     Node a(7); // head
+//     Node b(0);
+//     Node c(1);
+//     Node d(8);
+//     Node e(2);
+
+//     // attaching nodes
+//     a.next = &b;
+//     b.next = &c;
+//     c.next = &d;
+//     d.next = &e;
+//     e.next = NULL;
+
+//     cout<<(*(a.next)).val<<endl;
+//     cout<<(c.next)->val<<endl;
+// }
+
+
 #include<iostream>
 using namespace std;
 
-class Node{ // User Defined Data Type
-public:
+class node{
+    public:
     int val;
-    Node* next;
-    Node(int val){
+    node* next; 
+    node(int val){
         this->val = val;
     }
 };
 
 int main(){
-    Node a(7); // head
-    Node b(0);
-    Node c(1);
-    Node d(8);
-    Node e(2);
+    node a(7);
+    node b(0);
+    node c(1);
+    node d(8);
+    node e(2);
 
-    // attaching nodes
     a.next = &b;
     b.next = &c;
     c.next = &d;
@@ -26,4 +56,5 @@ int main(){
 
     cout<<(*(a.next)).val<<endl;
     cout<<(c.next)->val<<endl;
+
 }
